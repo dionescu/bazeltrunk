@@ -3,8 +3,10 @@ Reproduces a compile error encountered when building glog with gflags support wi
 
 Steps to reproduce the error:
 
+```
 git clone https://github.com/dionescu/bazeltrunk.git
 bazel build //external:glog
+```
 
 You should see an error similar to the one below:
 

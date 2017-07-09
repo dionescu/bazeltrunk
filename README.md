@@ -5,6 +5,7 @@ Steps to reproduce the error:
 
 ```
 git clone https://github.com/dionescu/bazeltrunk.git
+cd bazeltrunk
 bazel build //external:glog
 ```
 

@@ -71,20 +71,3 @@ def bazeltrunk_workspace(workspace_name):
         name = "glog_config",
         actual = workspace_name + "//third_party/glog:config"
     )
-
-    # libevent
-    native.new_http_archive(
-        name = "libevent_archive",
-        url = "https://github.com/libevent/libevent/archive/release-2.1.8-stable.tar.gz",
-        strip_prefix = "libevent-release-2.1.8-stable",
-        sha256 = "316ddb401745ac5d222d7c529ef1eada12f58f6376a66c1118eee803cb70f83d",
-        build_file = workspace_name + "//third_party:libevent.BUILD",
-    )
-    native.bind(
-        name = "libevent",
-        actual = "@libevent_archive//:libevent",
-    )
-    native.bind(
-        name = "libevent_config",
-        actual = workspace_name + "//third_party/libevent:config"
-    )
